@@ -65,7 +65,7 @@ async def _batch(event):
                 await conv.send_message("Cannot wait more longer for your response!")
                 return conv.cancel()
             try:
-                value = int(_range.text)
+                value = int(float(_range.text))
                 if value > 10000:
                     await conv.send_message("You can only get upto 10000 files in a single batch.")
                     return conv.cancel()
